@@ -1,0 +1,50 @@
+[OSEv3:children]
+masters
+etcd
+nodes
+
+[masters]
+openshift-master.brown-iposs.com openshift_ip=192.168.10.214
+
+[etcd]
+openshift-master.brown-iposs.com openshift_ip=192.168.10.214
+
+[nodes]
+openshift-master.brown-iposs.com openshift_ip=192.168.10.214 openshift_node_labels="{'zone': 'west'}"
+openshift-node.brown-iposs.com openshift_ip=192.168.10.215 openshift_node_labels="{'zone': 'east'}" openshift_schedulable=true 
+
+
+
+[OSEv3:vars]
+ansible_ssh_user=stack
+ansible_sudo=true
+ansible_become=true
+debug_level=4
+
+enable_docker_excluder=false
+enable_excluder=false
+
+openshift_enable_service_catalog=false
+ansible_service_broker_install=false	
+
+deployment_type=origin
+openshift_deplyoment_type=origin
+
+openshift_master_identity_provider=[{'name': 'htpasswd_auth', 'login': 'true', 'challenge': 'true', 'kind': 'HTPasswdPasswordIdentityProvider', 'filename': '/etc/origin/master/htpasswd'}]
+
+
+containerized=true
+
+openshift_master_api_port=8443
+openshift_master_console_port=8443
+
+openshift_release=v3.9
+openshift_image_tag=v3.9.0
+openshift_public_hostname=openshift-master.brown-iposs.com
+openshift_master_default_subdomain=apps.openshift-master.brown-iposs.com
+
+openshift_disable_check=disk_availability,docker_storage,memory_availability,docker_image_availability
+
+openshift_node_kubelet_args={'pods-per-core': ['10']}
+
+osm_use_cockpit=true
