@@ -84,6 +84,9 @@ fi
 # install the packages for Ansible
 yum -y --enablerepo=epel install ansible pyOpenSSL
 
+# Download and install oc CLI tool
+wget https://github.com/openshift/origin/releases/tag/v3.9.0/openshift-origin-client-tools-v3.9.0-191fece-linux-64bit.tar.gz
+tar –xvf openshift-origin-client-tools-v3.9.0-191fece-linux-64bit.tar.gz
 
 [ ! -d openshift-ansible ] && git clone https://github.com/openshift/openshift-ansible.git
 cd openshift-ansible && git fetch && git checkout release-3.9 && cd ..
