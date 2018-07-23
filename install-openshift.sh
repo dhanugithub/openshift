@@ -1,8 +1,8 @@
 ## Default variables to use
 export INTERACTIVE=${INTERACTIVE:="true"}
 export DOMAIN=${DOMAIN:="$(curl -s ipinfo.io/ip).nip.io"}
-export USERNAME=${USERNAME:="$(whoami)"}
-export PASSWORD=${PASSWORD:=password}
+export USERNAME=${USERNAME:="dhanashree"}
+export PASSWORD=${PASSWORD:=dhanashree}
 export VERSION=${VERSION:="3.9.0"}
 export SCRIPT_REPO=${SCRIPT_REPO:="https://raw.githubusercontent.com/gshipley/installcentos/master"}
 export IP=${IP:="$(ip route get 8.8.8.8 | awk '{print $NF; exit}')"}
@@ -64,7 +64,7 @@ yum install -y  wget git zile nano net-tools docker-1.13.1 \
 				kexec-tools sos psacct openssl-devel \
 				httpd-tools NetworkManager \
 				python-cryptography python2-pip python-devel python-passlib \
-        java-1.8.0-openjdk-headless "@Development Tools"
+				java-1.8.0-openjdk-headless "@Development Tools"
         
         
 #install epel
