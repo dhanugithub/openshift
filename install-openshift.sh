@@ -1,6 +1,6 @@
 ## Default variables to use
 export INTERACTIVE=${INTERACTIVE:="true"}
-export DOMAIN=${DOMAIN:="$(curl -s ipinfo.io/ip).nip.io"}
+export DOMAIN=${DOMAIN:="192.168.10.214.nip.io"}
 export USERNAME=${USERNAME:="dhanashree"}
 export PASSWORD=${PASSWORD:=dhanashree}
 export VERSION=${VERSION:="3.9.0"}
@@ -94,7 +94,8 @@ cd openshift-ansible && git fetch && git checkout release-3.9 && cd ..
 cat <<EOD > /etc/hosts
 127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4 
 ::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
-192.168.10.214 openshift console console.brown-ipoos.com
+192.168.10.214 openshift console.${DOMAIN}
+192.168.10.215 openshift apps.${DOMAIN}
 EOD
 
 
