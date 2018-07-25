@@ -4,7 +4,7 @@ export DOMAIN=${DOMAIN:="192.168.10.214.nip.io"}
 export USERNAME=${USERNAME:="dhanashree"}
 export PASSWORD=${PASSWORD:=dhanashree}
 export VERSION=${VERSION:="3.9.0"}
-export SCRIPT_REPO=${SCRIPT_REPO:="https://raw.githubusercontent.com/gshipley/installcentos/master"}
+export SCRIPT_REPO=${SCRIPT_REPO:="https://raw.githubusercontent.com/dhanugithub/openshift/master"}
 export IP=${IP:="$(ip route get 8.8.8.8 | awk '{print $NF; exit}')"}
 export API_PORT=${API_PORT:="8443"}
 export ANSIBLE_HOST_KEY_CHECKING=False
