@@ -4,14 +4,14 @@ etcd
 nodes
 
 [masters]
-192.168.10.214 openshift_ip=192.168.10.214
+192.168.10.216 openshift_ip=192.168.10.216
 
 [etcd]
-192.168.10.214 openshift_ip=192.168.10.214
+192.168.10.216 openshift_ip=192.168.10.216
 
 [nodes]
-192.168.10.214 openshift_ip=192.168.10.214 openshift_node_labels="{'zone': 'west'}"
-192.168.10.215 openshift_ip=192.168.10.215 openshift_node_labels="{'zone': 'east'}" openshift_schedulable=true 
+192.168.10.216 openshift_ip=192.168.10.216 openshift_node_labels="{'zone': 'west'}"
+192.168.10.216 openshift_ip=192.168.10.216 openshift_node_labels="{'zone': 'east'}" openshift_schedulable=true 
 
 
 
