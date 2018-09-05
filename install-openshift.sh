@@ -1,3 +1,6 @@
+#!/bin/bash
+
+
 ## Default variables to use
 export INTERACTIVE=${INTERACTIVE:="true"}
 export DOMAIN=${DOMAIN:="192.168.10.214.nip.io"}
