@@ -3,9 +3,9 @@
 
 ## Default variables to use
 export INTERACTIVE=${INTERACTIVE:="true"}
-export DOMAIN=${DOMAIN:="192.168.10.214.nip.io"}
-export USERNAME=${USERNAME:="dhanashree"}
-export PASSWORD=${PASSWORD:=dhanashree}
+export DOMAIN=${DOMAIN:="192.168.10.216.nip.io"}
+export USERNAME=${USERNAME:="openshift"}
+export PASSWORD=${PASSWORD:="openshift"}
 export VERSION=${VERSION:="3.9.0"}
 export SCRIPT_REPO=${SCRIPT_REPO:="https://raw.githubusercontent.com/dhanugithub/openshift/master"}
 export IP=${IP:="$(ip route get 8.8.8.8 | awk '{print $NF; exit}')"}
